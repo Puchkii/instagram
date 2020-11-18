@@ -24,6 +24,9 @@ class PostsController extends Controller
            'image' => ['required', 'image'],
         ]);
 
+//      post request van image opslaan naar de uploads map in de public folder
+        dd(request('image')->store('uploads', 'public'));
+
         auth()->user()->posts()->create($data);
 
         dd(request()->all());
