@@ -42,7 +42,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-//    een hasmany relatie met de user
+//    posts heeft een hasmany relatie met de user
     public function posts()
     {
         return $this->hasMany(Post::class);
