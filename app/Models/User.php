@@ -45,7 +45,7 @@ class User extends Authenticatable
 //    posts heeft een hasmany relatie met de user
     public function posts()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
     }
 
     public function profile()
