@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-class PostsController extends Controller
+class gitPostsController extends Controller
 {
     public function __construct()
     {
