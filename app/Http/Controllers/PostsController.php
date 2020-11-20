@@ -6,11 +6,11 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
-class gitPostsController extends Controller
+class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+         $this->middleware('auth');
     }
 
     public function create()
