@@ -42,6 +42,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($user) {
+            $user->profile()->create([
+                'title' => $user->username,
+            ]);
+        });
+    }
 //    posts heeft een hasmany relatie met de user
     public function posts()
     {
